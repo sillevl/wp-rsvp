@@ -1,0 +1,36 @@
+
+.rsvp-form label{
+	display: inline-block;
+	width: 120px;
+}
+
+.rsvp-form input[type=text]{
+	width: 200px;
+	color: #999;
+	font-style: italic;
+}
+
+.rsvp-form textarea{
+	height: 45px;
+	width: 200px;
+	color: #999;
+	font-style: italic;
+}
+
+.rsvp-form .error{
+	background-color: #FDD;
+}
+
+#vegilabel{
+	width: 0px;
+}
+
+#infobox{
+	color: #F66;
+	background-color: #FDD;
+	padding: 5px;
+	border: 1px solid #F66;
+	margin: 5px;
+}
+
+
