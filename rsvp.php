@@ -119,7 +119,7 @@ class RSVP_SILLE {
 	}
 
 	function getForm($list, $oops = ""){
-		$output = "<p><span class=\"drop-caps\">H</span>ier kunnen jullie zich inschrijven voor onze fantastische dag. Vul voor elke genodigde de naam en voornaam in, en bevestig of deze al dan niet zal komen. Extra opmerkingen of een vegetarische maaltijd kunnen ook aangegeven worden zodat wij daar ook rekening mee kunnen houden.</p><p>Extra personen kunnen geregistreerd worden door onderaan op de (+) knop te drukken.</p><p>De dagindeling en agenda kan je <a>hier</a> nog eens bekijken</p>";
+		$output = "<p><span class=\"drop-caps\">H</span>ier kunnen jullie zich inschrijven voor onze fantastische dag. Vul voor elke genodigde de naam en voornaam in, en bevestig of deze al dan niet zal komen. Extra opmerkingen of een vegetarische maaltijd kunnen ook aangegeven worden zodat wij daar ook rekening mee kunnen houden.</p><p>Extra personen kunnen geregistreerd worden door onderaan op de (+) knop te drukken.</p><p>De dagindeling en agenda kan je <a href=\"/15-september-2012/\">hier</a> nog eens bekijken</p>";
 		$output .= "<form method=\"post\" class=\"rsvp-form\" id=\"rsvp-form\">";
 		$output .= "<input type=\"hidden\" name=\"step\" value=\"first\" />";
 		$displayMessage = ($oops == "") ? "style=\"display: none;\" " :  "";
@@ -168,12 +168,15 @@ class RSVP_SILLE {
 			$output .= "</div>";
 		}
 
-		
-
-
+		$output .= "<p>";
 		$output .= "<input type=\"button\" value=\"+\" name=\"add\" id=\"buttonAdd\" class=\"button\" tooltip=\"Nieuwe persoon toevoegen.\"/>";
 		$output .= "<input type=\"button\" value=\"-\" name=\"remove\" id=\"buttonRemove\" class=\"button\" tooltip=\"Laatste persoon verwijderen.\"/>";
+		$output .= "Aantal inschrijvingen bijwerken.";
+		$output .= "</p>";
+		$output .= "<p style=\"text-align: right;\">";
+		$output .= "Alles en voor iedereen ingevuld? Druk dan op verzenden.";
 		$output .= "<input type=\"submit\" value=\"verzenden\" name=\"submit\" class=\"button\"/>";
+		$output .= "</p>";
 		$output .= "</form>";
 		return $output;
 	}
@@ -203,7 +206,7 @@ class RSVP_SILLE {
 			$output .= '<p>We kijken er naar uit jullie te mogen ontvangen.</p>';
 		}
 		if(count($excusedList) != 0){
-			$output .= "<p>Volgende personen mensen zullen niet aanwezig zijn:</p>";
+			$output .= "<p>Volgende personen zullen niet aanwezig zijn:</p>";
 			$output .= '<ul class="bullet_arrow2 imglist">';
 			foreach ($excusedList as $key => $item) {
 				$output .= '<li>'.$item->prename.' '.$item->name.'</li>';
