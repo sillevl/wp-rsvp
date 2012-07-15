@@ -9,8 +9,8 @@ $j(document).ready(function() {
     });
 
     $j('textarea[name*="comment"]').tipsy({trigger: 'focus', gravity: 'w', title: 'tooltip', fade: true });
-    $j('#buttonRemove').tipsy({trigger: 'hover', gravity: 'n', title: 'tooltip',live: true,  opacity: 0.5,});
-    $j('#buttonAdd').tipsy({trigger: 'hover', gravity: 'n', title: 'tooltip', live: true,  opacity: 0.5,});
+    $j('#buttonRemove').tipsy({trigger: 'hover', gravity: 'n', title: 'tooltip',live: true,  opacity: 0.5});
+    $j('#buttonAdd').tipsy({trigger: 'hover', gravity: 'n', title: 'tooltip', live: true,  opacity: 0.5});
 
     $j('#buttonAdd').click(function() {
         var num     = $j('.personItem').length - 1; // how many "duplicatable" input fields we currently have
